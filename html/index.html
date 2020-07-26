@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Grasa grant</title>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="head"> <!--навигационная панель мобильной версии-->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#" class="underline">Цифровая экономика</a>
+          <a href="#" class="underline">Гранты</a>
+          <a href="#" class="sbm underline" onclick="subnavm()">Гос. закупки
+            <img class="strel_mob" src="../images/icons8-шеврон-вниз-502.png" alt="strm">
+          </a>
+          <div>
+            <a href="#" class="subnav_item_m">ст 44 - ФЗ</a>
+            <a href="#" class="subnav_item_m">ст 223 - ФЗ</a>
+          </div>
+        </div>
+        
+        <!--боковое меню-->
+        <span
+          class="nav_mobile" 
+          style="font-size: 30px; cursor: pointer;"
+          onclick="openNav()"
+        >
+          <img class="menu" src="../images/icons8-меню-48.png" alt="menu" />
+          <img class="logo" src="../images/231.png" alt="logo" />
+        </span>
+  
+        <div> <!--аватарка (аккаунт)-->
+          <a href="#"
+            ><img
+              style="cursor: pointer;"
+              class="avatar"
+              src="../images/unnamed.png"
+              alt="avatar"
+          /></a>
+        </div>
+      </div>
+      <div class="list"> <!--десктопная версия-->
+        <div class="desktop_nav">
+          <a href="index.html" class="active_nav">Цифровая экономика</a>
+          <a href="#" class="deactive_nav">Гранты</a>
+          <a href="#" class="sb" onmouseover="subnav()" onmouseout="subnavo()">Гос. закупки 
+            <img class="strel" src="../images/icons8-шеврон-вниз-50.png" alt="str"></a>
+          <div id="sb" class="subnav">
+            <a href="#" class="subnav_item" onmouseover="subnav()" onmouseout="subnavo()">ст 44 - ФЗ</a>
+            <a href="#" class="subnav_item" onmouseover="subnav()" onmouseout="subnavo()">ст 223 - ФЗ</a>
+          </div>
+        </div>
+        <a href="#"><p class="pr">Инструкция</p></a>
+        <a href="#"><p class="pr">Письмо</p></a>
+        <a href="#"><p class="pr">Протокол</p></a>
+        <a href="#"><p>Информация</p></a>
+        <a href="#"><p>План</p></a>
+        <a href="#">
+          <p>Регламент</p>
+        </a>
+        <a href="#">
+          <p>Концепция</p>
+        </a>
+        <a href="#">
+          <p>Постановление</p>
+        </a>
+        <a href="#">
+          <p>Руководство</p>
+        </a>
+        <a href="#">
+          <p>Концепция и стратегии отрасли</p>
+        </a>
+        <a href="#">
+          <p>Приказ</p>
+        </a>
+        <a href="#">
+          <p>Техническое задание</p>
+        </a>
+        <a href="#">
+          <p>Методические рекомендации</p>
+        </a>
+        <a href="#">
+          <p class="pr2">Проект</p>
+        </a>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

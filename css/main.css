@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.head {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.strel_mob { /*стрелка в моб версии*/
+  width: 20px;
+}
+
+
+.subnav_item_m { /*спрятанное подменю "Гос. закупки"*/
+  display: none;
+}
+
+.subnav_item_m2 { /*появление меню "Гос. закупки" с помощью JS*/
+  padding: 8px;
+  display: block;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.subnav_item_m2:hover,
+.subnav_item_m2:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.subnav_item_m2::after { /*полоса в мобильной панели списка*/
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #ffffff;
+  transition: width .1s ease-in-out;
+}
+
+.subnav_item_m2:hover::after,
+.subnav_item_m2:active::after {
+  width: 100%;
+}
+
+.list p::after { /*полоса в мобильной панели списка*/
+  display: block;
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: #ffffff;
+  transition: width .1s ease-in-out;
+}
+
+.list p:hover::after {
+  width: 100%;
+}
+
+.desktop_nav {
+  display: none;
+}
+
+.strel {
+  width: 22px;
+}
+
+.sidenav {
+  font-weight: 600;
+  height: 100%;
+  font-size: 1.3rem;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #05a8f4;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav > a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav > a::after { /*полоса в мобильной панели навигации*/
+  display: block;
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: #ffffff;
+  transition: width .1s ease-in-out;
+}
+
+.sidenav > a:hover::after {
+  width: 100%;
+}
+
+.closebtn:hover::after,
+.closebtn:active::after {
+  content: none;
+}
+
+
+.sidenav > a:hover {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav_mobile {
+  padding-left: 6px;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  width: 30px;
+}
+
+.avatar {
+  margin: 0.6rem 1.2rem 0.6rem 0.6rem;
+  height: 35px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.list {
+  padding-top: 70px;
+  background-color: #05a8f4;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1% 40% 1% 15%;
+}
+
+.list > a {
+  
+  font-size: 1.3rem;
+  
+  color: white;
+  padding: 1% 0;
+}
+
+.list > a:hover,
+.list > a:active {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 1280px) {
+  .head {
+    position: static;
+    margin: 2% 5%;
+    width: auto;
+  }
+
+  .sidenav, .menu {
+    display: none;
+  }
+
+  .avatar {
+    height: 45px;
+    margin: 0;
+  }
+
+  .desktop_nav {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    grid-column: 1/4;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .desktop_nav > a {
+    flex-grow: 1;
+    padding: 30px 25% 30px 15%;
+    border-top: 1px solid #05a8f4;
+    text-align: left;
+    
+  }
+
+  .active_nav {
+    background-color: #05a8f4;
+    color: #ffffff;
+  }
+
+  .active_nav:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .deactive_nav {
+    background-color: #ffffff;
+    transition: 0.7s;
+  }
+
+  .deactive_nav:hover {
+    opacity: 0.8;
+    transition: 0.7s;
+    text-decoration: none;
+    color: #05a8f4;
+  }
+
+  .list {
+    display: grid;
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+
+  .list > a {
+    text-align: left;
+  }
+
+  
+
+  .subnav {
+    grid-column: 3;
+    display: none;
+    grid-area: 2/3/3/4;
+    grid-auto-flow: column;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 1;
+    color: #05a8f4;
+    width: 80%;
+    margin-right: 0;
+    position: inherit;
+  }
+
+  .subnav_item {
+    transition: 0.7s;
+    border: 1px solid #05a8f4;
+    padding: 30px 15.8% 30px 15%; 
+    color: #05a8f4;
+  }
+
+  .subnav_item:hover {
+    text-decoration: none;
+    color: #05a8f4;
+    transition: 0.7s;
+    background-color: rgba(5, 168, 244, 0.2);
+  }
+
+  .pr {
+    margin-top: 170px;
+  }
+
+  .sb {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sb:hover {
+    text-decoration: none;
+    color: #05a8f4;
+  }
+}
